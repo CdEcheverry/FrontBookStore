@@ -1,0 +1,20 @@
+<app-search-panel></app-search-panel>
+<ng-container *ngIf="(statusBook$ | async) === 'loading';else books">
+    <app-progress></app-progress>
+</ng-container>
+<ng-template #books>
+    <ng-container *ngIf="booksList$ | async as books">
+        <ng-container *ngIf="(statusBook$ | async) === 'failed'; else booksCardPanel">
+            <div class="p-5">
+                <div class="d-flex align-items-center justify-content-center">
+                    <h1 class="mx-5"><strong>{{failedMessage$ | async}}</strong></h1>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #booksCardPanel>
+            <div class="card-deck-books">
+                <app-book-cards *ngFor="let book of books" [book]="book"></app-book-cards>
+            </div>
+        </ng-template>
+    </ng-container>
+</ng-template>

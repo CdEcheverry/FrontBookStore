@@ -1,0 +1,26 @@
+<div class="main-panel">
+    <div class="search-panel">
+        <h1>Busca tu próximo nexo aquí:</h1>
+        <div class="input-group" *ngIf="criteria$ | async as criteria">
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn-search" id="dropdownSelectTypeSearch" ngbDropdownToggle>
+                    {{ criteria.typeSearch.name }}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownSelectTypeSearch">
+                    <button ngbDropdownItem (click)="typeSearch('AuthorFullName', 'Autor')">Autor</button>
+                    <button ngbDropdownItem (click)="typeSearch('Tittle', 'Titulo')">Titulo</button>
+                    <button ngbDropdownItem (click)="typeSearch('YearPublication', 'Año')">Año</button>
+                </div>
+            </div>
+            <input [defaultValue]="criteria?.inputSearch" type="text" name="searchInput" id="searchInput" class="input-search" [placeholder]="'Ingresa tu búsqueda por ' + criteria.typeSearch.name" [(ngModel)]="inputSearch" (keyup.enter)="doSearch()">
+            <div style="flex-basis: 35px;">
+                <button class="button-make-search" (click)="doSearch()">
+                    <fa-icon [icon]="faMagnifyingGlass" style="font-size: 1.2rem;"></fa-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="/assets/img/bookSearch.svg" alt="Woman search books" class="img-search">
+    </div>
+</div>

@@ -1,0 +1,30 @@
+header {
+    .background-logo-panel {
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .header {
+        backdrop-filter: blur(8px);
+        padding: 2.5rem 1.5rem;
+        box-shadow: -0.1rem 0.2rem 0.9rem 0rem rgba($color: #000000, $alpha: 0.1);
+        .logo-panel {
+            h2 {
+                font-weight: bold;
+                font-size: 2.6rem;
+                .img-logo {
+                    background: #FFD9C0;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                }
+            } 
+        }
+    }
+}

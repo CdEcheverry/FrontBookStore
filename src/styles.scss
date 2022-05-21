@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+.input-group {
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+    height: 4.5rem;
+    .btn-search {
+        border-radius: 1.5rem;
+        box-shadow: 0 0 0.5rem 0 rgba($color: #323232, $alpha: 0.2);
+        transition: all ease 300ms;
+        border: none;
+        padding: 0.5rem 1rem;
+        flex-basis: 25%;
+        background: #B24592;
+        height: 100%;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #F15F79, #B24592);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #F15F79, #B24592);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #fff;
+    }
+    .input-search {
+        border: none;
+        background-color: #f8f8f8;
+        color: #323232;
+        flex-grow: 2;
+        padding: 0 0 0 1rem;
+        height: 100%;
+        font-size: 1.5rem;
+        &::placeholder {
+            color: #424242;
+        }
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    .button-make-search {
+        border-radius: 50%;
+        background-color: #ccc;
+        color: #323232;
+        transition: all ease 300ms;
+        border: none;
+        height: 100%;
+        width: 3.5rem;
+    }
+}
+
+.badge-text {
+    background-color: #f8f8f8;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    width: fit-content
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+

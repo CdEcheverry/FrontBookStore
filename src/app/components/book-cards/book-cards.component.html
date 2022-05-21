@@ -1,0 +1,17 @@
+<ng-container *ngIf="book">
+    <p><strong>Publicado: {{book.yearPublication}}</strong></p>
+    <div class="main-book-panel" *ngIf="book">
+        <div class="title-content">
+            <h4><strong>{{book.tittle}}</strong></h4>
+            <h5>{{book.gender}}</h5>
+        </div>
+        <div class="content">
+            <h6 class="badge-text font-weigth-bold">
+                <strong>
+                    Por {{book.authorFullName}}
+                </strong>
+            </h6>
+        </div>
+
+    </div>
+</ng-container>
