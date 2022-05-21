@@ -30,7 +30,7 @@ const reducer = createReducer(
       ...state,
       criteria: {
         typeSearch: typeSearch || state.criteria.typeSearch,
-        inputSearch: inputSearch || state.criteria.inputSearch,
+        inputSearch: inputSearch || "",
       },
     })
   ),
